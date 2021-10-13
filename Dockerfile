@@ -69,3 +69,4 @@ COPY library /action/lib
 # Set the entrypoint #
 ######################
 ENTRYPOINT ["/action/lib/entrypoint.sh"]
+
