@@ -95,7 +95,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: https://github.com/orgs/${{github.repository_owner}}/packages?repo_name=${{github.repository.name}}
+          env_url: https://github.com/orgs/githubschool/packages?repo_name=github-actions-training-jdesulme
 
       - name: Update issue success
         uses: actions/github-script@v3.1.0
@@ -109,7 +109,7 @@ jobs:
               repo: context.repo.repo,
               issue_number: "${{ steps.create-issue.outputs.result }}",
               title: "New issue created",
-              body: "Successful!y deployed production"
+              body: "Successfully deployed production"
             })
 
       - name: Update issue failure
