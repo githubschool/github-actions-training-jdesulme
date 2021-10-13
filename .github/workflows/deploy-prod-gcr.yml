@@ -71,7 +71,7 @@ jobs:
       ########################################
       - name: Repository Name to lowercase
         run: |
-          echo IMAGE_REPOSITORY=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]') >> "$GITHUB_ENV"
+          echo IMAGE_REPOSITORY="$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_ENV"
         
       ###########################################
       # Build and Push containers to registries #
